@@ -29,5 +29,8 @@ Mientras una foto no exista, el carrusel muestra un fondo elegante con el nombre
 - **Boda:** novios en un salón neutro con arco de flores blancas y rubor, velas, candelabros, ambiente de noche elegante.
 - **Grado:** graduada/o con toga y birrete celebrando en un salón dorado de noche, mesas con centros de flores altas.
 
-## Alcance
-La cuadrícula de números es visual: no reserva, vende ni guarda datos. El botón de pago está deshabilitado hasta que la rifa esté autorizada.
+## Venta de tiquetes
+La cuadrícula, el formulario y el pago con Wompi ya están construidos. Para activarlos sigue **[CONFIGURAR-VENTA.md](CONFIGURAR-VENTA.md)**. Mientras `js/config.js` esté vacío, la página queda en modo demostración.
+
+## Video de la portada
+`assets/video/yenova-solorzano.mp4` (con imagen de respaldo `yenova-solorzano.jpg`). Para cambiarlo, reemplaza esos archivos con los mismos nombres.

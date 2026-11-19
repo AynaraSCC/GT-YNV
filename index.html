@@ -27,7 +27,7 @@
       <a href="#tiquetes">Tiquetes</a>
       <a href="#condiciones">Condiciones</a>
     </nav>
-    <a class="nav-cta" href="#tiquetes">Conoce la rifa <span>↗</span></a>
+    <a class="nav-cta" href="#tiquetes">Compra tu tiquete <span>↗</span></a>
   </header>
 
   <main>
@@ -41,16 +41,20 @@
           <span class="hero-note">Una gala · Hasta 100 invitados</span>
         </div>
       </div>
-      <div class="hero-art" aria-label="Ilustración decorativa de un tiquete dorado">
+      <div class="hero-art hero-media">
         <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
-        <div class="hero-ticket">
-          <div class="ticket-top"><span>GOLDEN TICKET</span><span>GT · 001</span></div>
-          <div class="ticket-star">✦</div>
-          <div class="ticket-title">A night<br>to remember</div>
-          <div class="ticket-bottom"><span>UNA CELEBRACIÓN ESPECIAL</span><span>✧</span></div>
+        <figure class="hero-video">
+          <video id="hero-video" src="assets/video/yenova-solorzano.mp4" poster="assets/video/yenova-solorzano.jpg" autoplay muted loop playsinline preload="metadata" aria-label="YeNoVa Cupcakes, responsable, y Recepciones Solórzano, casa de eventos contratada: ¡Ganaté una noche de gala!"></video>
+          <button type="button" class="hero-sound" id="hero-sound" aria-pressed="false" aria-label="Activar sonido"><span class="snd-off">🔇</span><span class="snd-on">🔊</span> <b>Sonido</b></button>
+          <i class="corner c-tl"></i><i class="corner c-tr"></i><i class="corner c-bl"></i><i class="corner c-br"></i>
+        </figure>
+        <div class="hero-mini-ticket" aria-hidden="true"><span>GOLDEN TICKET</span><b>A night<br>to remember</b></div>
+        <div class="hero-partners">
+          <div><span>RESPONSABLE</span><b>YeNoVa Cupcakes</b></div>
+          <i>✦</i>
+          <div><span>CASA DE EVENTOS CONTRATADA</span><b>Recepciones Solórzano</b></div>
         </div>
-        <span class="spark spark-a">✦</span><span class="spark spark-b">✧</span><span class="spark spark-c">✦</span>
-        <p class="art-caption">EL COMIENZO DE ALGO INOLVIDABLE</p>
+        <span class="spark spark-a">✦</span><span class="spark spark-b">✧</span>
       </div>
       <div class="hero-index"><span>01</span><i></i><span>07</span></div>
     </section>
@@ -177,19 +181,28 @@
       <div class="section-heading centered">
         <p class="eyebrow">05 — NUMERACIÓN DE LA RIFA</p>
         <h2>Mil oportunidades.<br><em>Un Golden Ticket.</em></h2>
-        <p class="section-sub">Vista ilustrativa de la numeración del 001 al 1000.</p>
+        <p class="section-sub">Elige tu número de la suerte. Los números en gris ya tienen dueño.</p>
       </div>
       <div class="number-summary">
         <div><span>NUMERACIÓN</span><strong>001 — 1000</strong></div>
         <div><span>VALOR POR TIQUETE</span><strong>$50.000 COP</strong></div>
-        <div><span>ESTADO</span><strong class="demo-status">VISTA DE DEMOSTRACIÓN</strong></div>
+        <div><span>DISPONIBLES</span><strong class="demo-status" id="ticket-status">VISTA DE DEMOSTRACIÓN</strong></div>
       </div>
-      <div class="ticket-grid" id="ticket-grid" aria-label="Muestra visual de los mil números de tiquete"></div>
-      <p class="demo-note"><span>ⓘ</span> Esta cuadrícula es únicamente una muestra visual. No permite reservar, comprar ni confirmar números. Los estados reales dependerán de la autorización y gestión formal de la rifa.</p>
-      <div class="payment-placeholder">
-        <div><p class="eyebrow">PRÓXIMAMENTE</p><h3>Espacio para el<br><em>enlace de pago.</em></h3><p>El botón de pago se habilitará cuando la organización tenga definido y autorizado el proceso correspondiente.</p></div>
-        <span class="payment-lock">✧</span>
-        <span class="button button-disabled" aria-disabled="true">Pago no disponible todavía</span>
+      <div class="ticket-tools">
+        <label class="ticket-search"><span>Buscar número</span><input type="number" id="ticket-search" min="1" max="1000" inputmode="numeric" placeholder="Ej. 777"></label>
+        <ul class="ticket-legend" aria-label="Convenciones">
+          <li><i class="lg-free"></i>Disponible</li>
+          <li><i class="lg-held"></i>En proceso de pago</li>
+          <li><i class="lg-sold"></i>Vendido</li>
+        </ul>
+      </div>
+      <div class="ticket-grid" id="ticket-grid" aria-label="Números del 001 al 1000"></div>
+      <p class="demo-note" id="ticket-note"><span>ⓘ</span> Vista de demostración: la venta en línea aún no está habilitada.</p>
+      <div class="buy-steps">
+        <div><span>01</span><b>Elige tu número</b><p>Toca un número dorado de la cuadrícula.</p></div>
+        <div><span>02</span><b>Déjanos tus datos</b><p>Nombre, cédula, celular, correo y la celebración que sueñas.</p></div>
+        <div><span>03</span><b>Paga con Wompi</b><p>Tarjeta, PSE, Nequi o Bancolombia. Tu número queda apartado 15 minutos.</p></div>
+        <div><span>04</span><b>Recibe tu confirmación</b><p>Tu número se pone en gris y te llega el comprobante a tu correo.</p></div>
       </div>
     </section>
 
@@ -217,9 +230,34 @@
         <article><span>NO INCLUIDO</span><h3>Gastos personales</h3><p>Maquillaje, transporte de invitados y cualquier servicio adicional que no esté expresamente indicado entre los beneficios del premio correrán por cuenta del ganador.</p></article>
         <article><span>AFORO</span><h3>Hasta 100 invitados</h3><p>El evento está proyectado para 100 invitados. Los detalles se confirmarán en las condiciones oficiales.</p></article>
       </div>
-      <p class="legal-note">Esta página es una maqueta de presentación. Antes de ofrecer participaciones o recibir pagos, la organización debe verificar los requisitos, autorizaciones y obligaciones aplicables a la realización de rifas en Colombia, así como el tratamiento de datos personales.</p>
+      <p class="legal-note">Autorización de la rifa: <b>[número de autorización pendiente]</b>. Los pagos se procesan a través de Wompi. Los datos personales se usan únicamente para gestionar la participación en la rifa, conforme a la Ley 1581 de 2012.</p>
     </section>
   </main>
+
+  <dialog class="buy-dialog" id="buy-dialog" aria-labelledby="buy-title">
+    <form id="buy-form" novalidate>
+      <button type="button" class="buy-close" data-close aria-label="Cerrar">✕</button>
+      <div class="buy-ticket"><span>GOLDEN TICKET</span><b id="buy-number">000</b><small>$50.000 COP</small></div>
+      <h3 id="buy-title">Aparta tu <em>número de la suerte.</em></h3>
+      <p class="buy-sub">Completa tus datos. Después te llevamos a Wompi para pagar de forma segura.</p>
+      <label>Nombre completo<input name="nombre" autocomplete="name" required minlength="5" maxlength="120"></label>
+      <div class="buy-row">
+        <label>Cédula<input name="cedula" inputmode="numeric" pattern="[0-9]{5,15}" required maxlength="15"></label>
+        <label>Celular (WhatsApp)<input name="telefono" type="tel" inputmode="numeric" autocomplete="tel-national" pattern="3[0-9]{9}" placeholder="3001234567" required maxlength="10"></label>
+      </div>
+      <label>Correo electrónico<input name="email" type="email" autocomplete="email" required maxlength="160"></label>
+      <fieldset>
+        <legend>¿Qué celebrarías si ganas?</legend>
+        <label class="buy-choice"><input type="radio" name="celebracion" value="quince" required><span>Tus quince</span></label>
+        <label class="buy-choice"><input type="radio" name="celebracion" value="boda"><span>Tu boda soñada</span></label>
+        <label class="buy-choice"><input type="radio" name="celebracion" value="grado"><span>Tu grado universitario</span></label>
+      </fieldset>
+      <label class="buy-consent"><input type="checkbox" name="acepta" required><span>Autorizo el tratamiento de mis datos personales para gestionar mi participación en la rifa, conforme a la Ley 1581 de 2012.</span></label>
+      <p class="buy-error" id="buy-error" role="alert" hidden></p>
+      <button type="submit" class="button button-gold buy-submit">Continuar al pago <span>→</span></button>
+      <p class="buy-fine">Tu número queda apartado 15 minutos mientras pagas. Si no se completa el pago, vuelve a quedar libre.</p>
+    </form>
+  </dialog>
 
   <footer class="footer">
     <a class="brand" href="#inicio"><span class="brand-mark">YNV</span><span class="brand-name">GOLDEN <b>TICKET</b></span></a>
@@ -227,7 +265,9 @@
     <a href="#inicio" class="back-top">VOLVER ARRIBA ↑</a>
     <small>© 2026 GOLDEN TICKET · YENOVA CUPCAKES · BOGOTÁ</small>
   </footer>
+  <script src="js/config.js"></script>
   <script src="js/script.js"></script>
+  <script src="js/tiquetes.js"></script>
   <script type="module" src="js/salon.js"></script>
 </body>
 </html>
