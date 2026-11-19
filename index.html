@@ -3,22 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Golden Ticket — información de una rifa para ganar una celebración especial.">
-  <title>Golden Ticket | Una celebración para recordar</title>
+  <meta name="description" content="Golden Ticket por YeNoVa Cupcakes — una rifa para ganar una noche de lujo, ensueño y fantasía.">
+  <meta name="theme-color" content="#090909">
+  <title>Golden Ticket | YeNoVa Cupcakes</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/styles.css">
+  <script type="importmap">
+    {"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js","three/addons/":"https://cdn.jsdelivr.net/npm/three@0.160.0/examples/jsm/"}}
+  </script>
 </head>
 <body>
   <header class="topbar">
     <a class="brand" href="#inicio" aria-label="Golden Ticket, inicio">
       <span class="brand-mark">YNV</span>
-      <span class="brand-name">GOLDEN <b>TICKET</b>   POR YENOVA CUPCAKES</b></span>
+      <span class="brand-name">GOLDEN <b>TICKET</b> · POR YENOVA CUPCAKES</span>
     </a>
     <nav class="nav">
       <a href="#premio">El premio</a>
       <a href="#galeria">Inspiración</a>
+      <a href="#salon">El salón</a>
       <a href="#tiquetes">Tiquetes</a>
       <a href="#condiciones">Condiciones</a>
     </nav>
@@ -29,11 +34,11 @@
     <section class="hero section-pad" id="inicio">
       <div class="hero-copy">
         <p class="eyebrow"><span></span> UNA OPORTUNIDAD PARA CELEBRAR</p>
-        <h1>Tu historia merece<br><em>un día extraordinario.</em></h1>
+        <h1>Tu historia merece <em>una noche de lujo, ensueño y fantasía.</em></h1>
         <p class="hero-lead">Golden Ticket es una <strong>rifa</strong> en la que puedes ganar una celebración especial, pensada para convertirse en uno de tus recuerdos favoritos.</p>
         <div class="hero-actions">
           <a class="button button-gold" href="#premio">Descubre el premio <span>↓</span></a>
-          <span class="hero-note">Una celebración · Hasta 100 invitados</span>
+          <span class="hero-note">Una gala · Hasta 100 invitados</span>
         </div>
       </div>
       <div class="hero-art" aria-label="Ilustración decorativa de un tiquete dorado">
@@ -41,13 +46,13 @@
         <div class="hero-ticket">
           <div class="ticket-top"><span>GOLDEN TICKET</span><span>GT · 001</span></div>
           <div class="ticket-star">✦</div>
-          <div class="ticket-title">A day<br>to remember</div>
+          <div class="ticket-title">A night<br>to remember</div>
           <div class="ticket-bottom"><span>UNA CELEBRACIÓN ESPECIAL</span><span>✧</span></div>
         </div>
         <span class="spark spark-a">✦</span><span class="spark spark-b">✧</span><span class="spark spark-c">✦</span>
         <p class="art-caption">EL COMIENZO DE ALGO INOLVIDABLE</p>
       </div>
-      <div class="hero-index"><span>01</span><i></i><span>04</span></div>
+      <div class="hero-index"><span>01</span><i></i><span>07</span></div>
     </section>
 
     <section class="intro-strip">
@@ -57,11 +62,31 @@
     <section class="prize section-pad" id="premio">
       <div class="section-heading">
         <p class="eyebrow">01 — EL PREMIO</p>
-        <h2>Una celebración.<br><em>Tres maneras de vivirla.</em></h2>
+        <h2>Una celebración.<br><em>Tres opciones para elegir.</em></h2>
+      </div>
+      <div class="prize-options" aria-label="Opciones de celebración">
+        <button type="button" class="prize-option is-active" data-jump="0" data-cat="quince"><span>01</span><b>Tus quince</b><i>✦</i></button>
+        <button type="button" class="prize-option" data-jump="3" data-cat="boda"><span>02</span><b>Tu boda soñada</b><i>✦</i></button>
+        <button type="button" class="prize-option" data-jump="6" data-cat="grado"><span>03</span><b>El triunfo de tu grado universitario</b><i>✦</i></button>
       </div>
       <div class="prize-layout">
-        <div class="prize-image">
-          <div class="image-placeholder-label">GOLDEN EXPERIENCE <span>✦</span></div>
+        <div class="prize-image story-reel" id="story-reel" aria-roledescription="carrusel" aria-label="Fotos de quince años, bodas y grados">
+          <div class="reel-slides">
+            <div class="reel-slide reel-quince is-active" data-cat="quince" data-label="QUINCE AÑOS" data-src="assets/images/quince-1.jpg"><span class="reel-fallback"><i>✦</i>Quince años</span></div>
+            <div class="reel-slide reel-quince" data-cat="quince" data-label="QUINCE AÑOS" data-src="assets/images/quince-2.jpg"><span class="reel-fallback"><i>✦</i>Quince años</span></div>
+            <div class="reel-slide reel-quince" data-cat="quince" data-label="QUINCE AÑOS" data-src="assets/images/quince-3.jpg"><span class="reel-fallback"><i>✦</i>Quince años</span></div>
+            <div class="reel-slide reel-boda" data-cat="boda" data-label="BODA" data-src="assets/images/boda-1.jpg"><span class="reel-fallback"><i>✦</i>Boda</span></div>
+            <div class="reel-slide reel-boda" data-cat="boda" data-label="BODA" data-src="assets/images/boda-2.jpg"><span class="reel-fallback"><i>✦</i>Boda</span></div>
+            <div class="reel-slide reel-boda" data-cat="boda" data-label="BODA" data-src="assets/images/boda-3.jpg"><span class="reel-fallback"><i>✦</i>Boda</span></div>
+            <div class="reel-slide reel-grado" data-cat="grado" data-label="GRADO UNIVERSITARIO" data-src="assets/images/grado-1.jpg"><span class="reel-fallback"><i>✦</i>Grado universitario</span></div>
+            <div class="reel-slide reel-grado" data-cat="grado" data-label="GRADO UNIVERSITARIO" data-src="assets/images/grado-2.jpg"><span class="reel-fallback"><i>✦</i>Grado universitario</span></div>
+            <div class="reel-slide reel-grado" data-cat="grado" data-label="GRADO UNIVERSITARIO" data-src="assets/images/grado-3.jpg"><span class="reel-fallback"><i>✦</i>Grado universitario</span></div>
+          </div>
+          <div class="reel-shade"></div>
+          <div class="reel-progress" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
+          <div class="image-placeholder-label">GOLDEN EXPERIENCE <span class="reel-cat">QUINCE AÑOS</span></div>
+          <button type="button" class="reel-nav reel-prev" aria-label="Foto anterior">‹</button>
+          <button type="button" class="reel-nav reel-next" aria-label="Foto siguiente">›</button>
           <div class="prize-image-copy"><span>EL DÍA QUE IMAGINAS</span><strong>Lo hacemos<br>parte de tu historia.</strong></div>
         </div>
         <div class="prize-details">
@@ -69,14 +94,31 @@
           <div class="price-line"><span>Valor del tiquete</span><strong>$50.000 <small>COP</small></strong></div>
           <div class="included">
             <h3>¿Qué incluye?</h3>
-            <ul>
-              <li><span>✦</span> Salón social con capacidad para hasta 100 personas.</li>
-              <li><span>✦</span> Decoración del salón de acuerdo con el tipo de celebración y las preferencias del ganador.</li>
-              <li><span>✦</span> Servicio de comida para la cantidad de invitados establecida en las condiciones del premio.</li>
-            </ul>
+            <p class="included-summary">Salón para 100 invitados, decoración, bufé, ponqué, bebidas, licor, DJ, hora loca, fotografía, video y mucho más. Cada opción tiene su propio paquete.</p>
+            <a class="button button-outline" href="#incluye">Ver todo lo que incluye <span>↓</span></a>
           </div>
-          <p class="fine-print">El premio está contemplado para una celebración de entre 50 y 100 personas, sujeto a las condiciones definitivas de la rifa.</p>
         </div>
+      </div>
+      <div class="included-full" id="incluye">
+        <div class="incl-intro">
+          <p class="eyebrow">¿QUÉ INCLUYE?</p>
+          <h3>Cada celebración es distinta.<br><em>Por eso cada una tiene lo suyo.</em></h3>
+          <p>Elige una opción y mira, punto por punto, todo lo que trae tu premio. Lo marcado en dorado es propio de esa celebración.</p>
+        </div>
+        <div class="incl-tabs" role="tablist" aria-label="Elige la celebración"><button type="button" role="tab" class="incl-tab is-active" id="tab-quince" data-cat="quince" aria-selected="true" aria-controls="incl-quince">Quince años</button><button type="button" role="tab" class="incl-tab" id="tab-boda" data-cat="boda" aria-selected="false" aria-controls="incl-boda">Boda</button><button type="button" role="tab" class="incl-tab" id="tab-grado" data-cat="grado" aria-selected="false" aria-controls="incl-grado">Grado</button></div>
+          <div class="incl-panel" id="incl-quince" role="tabpanel" aria-labelledby="tab-quince" data-cat="quince">
+            <div class="incl-head"><p class="eyebrow">UNA NOCHE DE PRINCESA</p><h3>Tus quince</h3></div>
+            <div class="incl-grid"><div class="incl-group"><h4><i>✧</i>Salón y decoración</h4><ul><li><span>✦</span>Salón para hasta 100 invitados</li><li><span>✦</span>Decoración del salón</li><li><span>✦</span>Centros de mesa sencillos</li><li><span>✦</span>Transporte y embalaje del evento al salón</li></ul></div><div class="incl-group"><h4><i>✦</i>Comida y bebida</h4><ul><li><span>✦</span>Bufé</li><li><span>✦</span>Ponqué</li><li><span>✦</span>Mesa de postres</li><li><span>✦</span>Bebidas: limonadas</li><li><span>✦</span>Cóctel ilimitado (una sola elección)</li><li><span>✦</span>Licor: hasta 10 litros de whisky</li><li><span>✦</span>Champaña para el brindis</li><li><span>✦</span>Servicio de meseros</li></ul></div><div class="incl-group"><h4><i>♪</i>Música y fiesta</h4><ul><li><span>✦</span>Sonido y DJ</li><li><span>✦</span>Hora loca (con indumentaria)</li></ul></div><div class="incl-group"><h4><i>✧</i>Fotos y recuerdos</h4><ul><li><span>✦</span>Fotografía (digital)</li><li><span>✦</span>Video (digital)</li><li><span>✦</span>Fotorregistro de entrada</li><li><span>✦</span>Invitación digital</li><li><span>✦</span>Libro de firmas</li></ul></div><div class="incl-group"><h4><i>♡</i>Detalles especiales</h4><ul><li class="is-special"><span>✦</span>Vestido en boutique de convenio</li><li class="is-special"><span>✦</span>Anillo de plata</li></ul></div></div>
+          </div>
+          <div class="incl-panel" id="incl-boda" role="tabpanel" aria-labelledby="tab-boda" data-cat="boda" hidden>
+            <div class="incl-head"><p class="eyebrow">UN COMIENZO PARA DOS</p><h3>Tu boda soñada</h3></div>
+            <div class="incl-grid"><div class="incl-group"><h4><i>✧</i>Salón y decoración</h4><ul><li><span>✦</span>Salón para hasta 100 invitados</li><li class="is-special"><span>✦</span>Decoración del salón con temática romántica</li><li><span>✦</span>Centros de mesa sencillos</li><li><span>✦</span>Transporte y embalaje del evento al salón</li></ul></div><div class="incl-group"><h4><i>✦</i>Comida y bebida</h4><ul><li><span>✦</span>Bufé</li><li><span>✦</span>Ponqué</li><li><span>✦</span>Mesa de postres</li><li><span>✦</span>Bebidas: limonadas</li><li class="is-special"><span>✦</span>Cóctel ilimitado (dos elecciones)</li><li><span>✦</span>Licor: hasta 10 litros de whisky</li><li><span>✦</span>Champaña para el brindis</li><li><span>✦</span>Servicio de meseros</li></ul></div><div class="incl-group"><h4><i>♪</i>Música y fiesta</h4><ul><li><span>✦</span>Sonido y DJ</li><li><span>✦</span>Hora loca (con indumentaria)</li></ul></div><div class="incl-group"><h4><i>✧</i>Fotos y recuerdos</h4><ul><li><span>✦</span>Fotografía (digital)</li><li><span>✦</span>Video (digital)</li><li><span>✦</span>Fotorregistro de entrada</li><li class="is-special"><span>✦</span>Registro fotográfico en la iglesia</li><li class="is-special"><span>✦</span>Sesión fotográfica</li><li><span>✦</span>Invitación digital</li><li><span>✦</span>Libro de firmas</li></ul></div></div>
+          </div>
+          <div class="incl-panel" id="incl-grado" role="tabpanel" aria-labelledby="tab-grado" data-cat="grado" hidden>
+            <div class="incl-head"><p class="eyebrow">EL LOGRO DE UNA ETAPA</p><h3>El triunfo de tu grado universitario</h3></div>
+            <div class="incl-grid"><div class="incl-group"><h4><i>✧</i>Salón y decoración</h4><ul><li><span>✦</span>Salón para hasta 100 invitados</li><li><span>✦</span>Decoración del salón</li><li class="is-special"><span>✦</span>Centros de mesa temáticos</li><li><span>✦</span>Transporte y embalaje del evento al salón</li></ul></div><div class="incl-group"><h4><i>✦</i>Comida y bebida</h4><ul><li><span>✦</span>Bufé</li><li><span>✦</span>Ponqué</li><li><span>✦</span>Mesa de postres</li><li><span>✦</span>Bebidas: limonadas</li><li><span>✦</span>Cóctel ilimitado (una sola elección)</li><li><span>✦</span>Licor: hasta 10 litros de whisky</li><li><span>✦</span>Champaña para el brindis</li><li><span>✦</span>Servicio de meseros</li></ul></div><div class="incl-group"><h4><i>♪</i>Música y fiesta</h4><ul><li><span>✦</span>Sonido y DJ</li><li><span>✦</span>Hora loca (con indumentaria)</li></ul></div><div class="incl-group"><h4><i>✧</i>Fotos y recuerdos</h4><ul><li><span>✦</span>Fotografía (digital)</li><li><span>✦</span>Video (digital)</li><li class="is-special"><span>✦</span>Fotorregistro</li><li><span>✦</span>Invitación digital</li><li><span>✦</span>Libro de firmas</li></ul></div><div class="incl-group"><h4><i>♡</i>Detalles especiales</h4><ul><li class="is-special"><span>✦</span>Anillo de plata</li></ul></div></div>
+          </div>
+        <p class="fine-print">Evento proyectado para 100 invitados. Detalles sujetos a las condiciones oficiales de la rifa.</p>
       </div>
     </section>
 
@@ -100,12 +142,28 @@
           <figcaption><span>GRADO UNIVERSITARIO</span><b>El logro de una etapa</b></figcaption>
         </figure>
       </div>
-      <p class="gallery-hint">Las fotografías son espacios reservados. Reemplaza los archivos en <code>assets/images/</code>.</p>
+    </section>
+
+    <section class="salon" id="salon" aria-label="Recorrido 3D por un salón de eventos">
+      <div class="section-heading centered salon-heading">
+        <p class="eyebrow">03 — ENTRA AL SALÓN</p>
+        <h2>Las puertas se abren.<br><em>Tu noche comienza.</em></h2>
+        <p class="section-sub">Una gala en tonos marfil, champaña y dorado. Desliza para mirar alrededor.</p>
+      </div>
+      <div class="salon-stage" id="salon-stage">
+        <canvas id="salon-canvas" aria-hidden="true"></canvas>
+        <div class="salon-loading" id="salon-loading"><span>✦</span>Preparando el salón…</div>
+        <div class="salon-ui">
+          <button type="button" class="button button-gold salon-replay" id="salon-replay" hidden>Abrir de nuevo <span>↺</span></button>
+          <span class="salon-hint" id="salon-hint" hidden>← Desliza para mirar →</span>
+        </div>
+      </div>
+      <p class="salon-note">Recreación ilustrativa. El salón y la decoración finales dependerán del tipo de celebración y de las condiciones oficiales del premio.</p>
     </section>
 
     <section class="ticket-showcase" aria-label="Animación decorativa de tiquetes dorados">
       <div class="showcase-glow"></div>
-      <p class="eyebrow">03 — EL DETALLE DORADO</p>
+      <p class="eyebrow">04 — EL DETALLE DORADO</p>
       <h2>Una posibilidad<br><em>que brilla.</em></h2>
       <p class="showcase-text">Cada tiquete representa la ilusión de celebrar algo importante.</p>
       <div class="floating-tickets">
@@ -117,7 +175,7 @@
 
     <section class="numbers section-pad" id="tiquetes">
       <div class="section-heading centered">
-        <p class="eyebrow">04 — NUMERACIÓN DE LA RIFA</p>
+        <p class="eyebrow">05 — NUMERACIÓN DE LA RIFA</p>
         <h2>Mil oportunidades.<br><em>Un Golden Ticket.</em></h2>
         <p class="section-sub">Vista ilustrativa de la numeración del 001 al 1000.</p>
       </div>
@@ -137,38 +195,39 @@
 
     <section class="preferences section-pad">
       <div class="preferences-copy">
-        <p class="eyebrow">05 — IMAGINA TU CELEBRACIÓN</p>
+        <p class="eyebrow">06 — IMAGINA TU CELEBRACIÓN</p>
         <h2>¿Para qué utilizarías<br><em>tu Golden Ticket?</em></h2>
         <p>El premio contempla tres tipos de celebración. La preferencia del ganador ayudará a orientar la propuesta de su día especial.</p>
       </div>
       <div class="preference-list">
-        <div><span>01</span><b>Boda</b><i>↗</i></div>
-        <div><span>02</span><b>Fiesta de quince años</b><i>↗</i></div>
-        <div><span>03</span><b>Grado universitario</b><i>↗</i></div>
-        <div class="guest-count"><span>INVITADOS</span><b>Entre 50 y 100 personas</b><small>La cantidad exacta y el alcance del servicio se establecerán en las condiciones del premio.</small></div>
+        <div><span>01</span><b>Tus quince</b><i>↗</i></div>
+        <div><span>02</span><b>Tu boda soñada</b><i>↗</i></div>
+        <div><span>03</span><b>El triunfo de tu grado universitario</b><i>↗</i></div>
+        <div class="guest-count"><span>INVITADOS</span><b>Hasta 100 personas</b><small>El evento está proyectado para 100 invitados. Cada opción tiene su propio paquete de servicios.</small></div>
       </div>
     </section>
 
     <section class="conditions section-pad" id="condiciones">
       <div class="section-heading">
-        <p class="eyebrow">06 — INFORMACIÓN IMPORTANTE</p>
+        <p class="eyebrow">07 — INFORMACIÓN IMPORTANTE</p>
         <h2>Todo claro,<br><em>desde el principio.</em></h2>
       </div>
       <div class="conditions-grid">
-        <article><span>INCLUIDO</span><h3>Tu celebración</h3><p>Salón social, decoración de acuerdo con la celebración elegida y servicio de comida, dentro de los límites y condiciones que se publiquen oficialmente.</p></article>
-        <article><span>NO INCLUIDO</span><h3>Gastos personales</h3><p>Maquillaje, transporte y cualquier servicio adicional que no esté expresamente indicado entre los beneficios del premio correrán por cuenta del ganador.</p></article>
-        <article><span>AFORO</span><h3>De 50 a 100 invitados</h3><p>La celebración está planteada para un grupo de entre 50 y 100 personas. Los detalles se confirmarán en las condiciones oficiales.</p></article>
+        <article><span>INCLUIDO</span><h3>Tu celebración</h3><p>Salón, decoración, bufé, bebidas, música, fotografía y video, según el paquete de la celebración elegida (quince, boda o grado), dentro de las condiciones que se publiquen oficialmente.</p></article>
+        <article><span>NO INCLUIDO</span><h3>Gastos personales</h3><p>Maquillaje, transporte de invitados y cualquier servicio adicional que no esté expresamente indicado entre los beneficios del premio correrán por cuenta del ganador.</p></article>
+        <article><span>AFORO</span><h3>Hasta 100 invitados</h3><p>El evento está proyectado para 100 invitados. Los detalles se confirmarán en las condiciones oficiales.</p></article>
       </div>
       <p class="legal-note">Esta página es una maqueta de presentación. Antes de ofrecer participaciones o recibir pagos, la organización debe verificar los requisitos, autorizaciones y obligaciones aplicables a la realización de rifas en Colombia, así como el tratamiento de datos personales.</p>
     </section>
   </main>
 
   <footer class="footer">
-    <a class="brand" href="#inicio"><span class="brand-mark">𓂀<span></span></span><span class="brand-name">GOLDEN <b>TICKET</b></span></a>
-    <p>Una celebración para recordar.</p>
+    <a class="brand" href="#inicio"><span class="brand-mark">YNV</span><span class="brand-name">GOLDEN <b>TICKET</b></span></a>
+    <p>Una noche para recordar.</p>
     <a href="#inicio" class="back-top">VOLVER ARRIBA ↑</a>
-    <small>© 2026 GOLDEN TICKET · MAQUETA DEMOSTRATIVA</small>
+    <small>© 2026 GOLDEN TICKET · YENOVA CUPCAKES · BOGOTÁ</small>
   </footer>
   <script src="js/script.js"></script>
+  <script type="module" src="js/salon.js"></script>
 </body>
 </html>
