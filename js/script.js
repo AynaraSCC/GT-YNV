@@ -1,17 +1,3 @@
-// Golden Ticket — maqueta visual. Esta cuadrícula no reserva ni vende números.
-const grid = document.getElementById("ticket-grid");
-if (grid) {
-  const fragment = document.createDocumentFragment();
-  for (let number = 1; number <= 1000; number += 1) {
-    const item = document.createElement("div");
-    item.className = "ticket-number";
-    item.textContent = String(number).padStart(3, "0");
-    item.setAttribute("aria-label", `Número ${String(number).padStart(3, "0")} — muestra visual`);
-    fragment.appendChild(item);
-  }
-  grid.appendChild(fragment);
-}
-
 // Carrusel "Lo hacemos parte de tu historia": 3 fotos de quince, 3 de boda y 3 de grado.
 const reel = document.getElementById("story-reel");
 if (reel) {
@@ -94,3 +80,18 @@ function showIncluded(cat) {
 }
 inclTabs.forEach((t) => t.addEventListener("click", () => showIncluded(t.dataset.cat)));
 document.querySelectorAll(".prize-option").forEach((o) => o.addEventListener("click", () => showIncluded(o.dataset.cat)));
+
+// Video de la portada: botón de sonido y pausa cuando no se ve (ahorra batería)
+const heroVideo = document.getElementById("hero-video");
+const heroSound = document.getElementById("hero-sound");
+if (heroVideo && heroSound) {
+  heroSound.addEventListener("click", () => {
+    heroVideo.muted = !heroVideo.muted;
+    if (!heroVideo.muted) { heroVideo.currentTime = 0; heroVideo.play().catch(() => {}); }
+    heroSound.setAttribute("aria-pressed", String(!heroVideo.muted));
+    heroSound.setAttribute("aria-label", heroVideo.muted ? "Activar sonido" : "Silenciar");
+  });
+  new IntersectionObserver(([e]) => {
+    if (e.isIntersecting) heroVideo.play().catch(() => {}); else heroVideo.pause();
+  }, { threshold: 0.2 }).observe(heroVideo);
+}
