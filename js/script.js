@@ -80,3 +80,17 @@ if (reel) {
   document.addEventListener("visibilitychange", () => (document.hidden ? clearTimeout(timer) : show(index)));
   show(0);
 }
+
+// Desglose "¿Qué incluye?" por celebración
+const inclTabs = [...document.querySelectorAll(".incl-tab")];
+const inclPanels = [...document.querySelectorAll(".incl-panel")];
+function showIncluded(cat) {
+  inclTabs.forEach((t) => {
+    const on = t.dataset.cat === cat;
+    t.classList.toggle("is-active", on);
+    t.setAttribute("aria-selected", String(on));
+  });
+  inclPanels.forEach((p) => { p.hidden = p.dataset.cat !== cat; });
+}
+inclTabs.forEach((t) => t.addEventListener("click", () => showIncluded(t.dataset.cat)));
+document.querySelectorAll(".prize-option").forEach((o) => o.addEventListener("click", () => showIncluded(o.dataset.cat)));
