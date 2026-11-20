@@ -78,3 +78,6 @@ button.ticket-number{all:unset;box-sizing:border-box;cursor:pointer;border:1px s
 #hero-sound{right:14px;bottom:14px;top:auto}#reel-sound{right:12px;top:26px;bottom:auto}
 @media(max-width:800px){.story-reel{width:min(100%,calc(74vh * 9 / 16))}}
 .reel-progress{pointer-events:none}.story-reel .reel-slide,.story-reel video{filter:none!important}
+/* Todos los videos del carrusel: 576x960 (3:5) */
+.story-reel{aspect-ratio:3/5;width:min(100%,420px,calc(78vh * 3 / 5))}.reel-slide video{object-fit:cover}
+@media(max-width:800px){.story-reel{width:min(100%,calc(74vh * 3 / 5))}}
