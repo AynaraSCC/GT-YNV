@@ -11,7 +11,7 @@ El salón 3D usa módulos de JavaScript, así que **no funciona abriendo el arch
 2. El premio — tres opciones: **Tus quince**, **Tu boda soñada**, **El triunfo de tu grado universitario**, con carrusel de fotos.
 3. Inspiración — galería de tres fotos.
 4. **Salón 3D** — las puertas se abren y la cámara entra a un salón de gala en tonos marfil, champaña y dorado (`js/salon.js`, con Three.js desde CDN).
-5. Tiquetes dorados, numeración 001–1000, preferencias y condiciones.
+5. Tickets dorados, numeración 000–999, preferencias y condiciones.
 
 ## Fotografías
 Guárdalas en `assets/images/` con estos nombres exactos (formato vertical u horizontal, mínimo 1200 px):
@@ -29,7 +29,7 @@ Mientras una foto no exista, el carrusel muestra un fondo elegante con el nombre
 - **Boda:** novios en un salón neutro con arco de flores blancas y rubor, velas, candelabros, ambiente de noche elegante.
 - **Grado:** graduada/o con toga y birrete celebrando en un salón dorado de noche, mesas con centros de flores altas.
 
-## Venta de tiquetes
+## Venta de tickets
 La cuadrícula, el formulario y el pago con Wompi ya están construidos. Para activarlos sigue **[CONFIGURAR-VENTA.md](CONFIGURAR-VENTA.md)**. Mientras `js/config.js` esté vacío, la página queda en modo demostración.
 
 ## Video de la portada

@@ -3,9 +3,9 @@
 -- Pega TODO este archivo en Supabase → SQL Editor → New query → Run.
 -- =====================================================================
 
--- 1) Tiquetes: los 1000 números y su estado ---------------------------
+-- 1) Tickets: los 1000 números (000 a 999) y su estado -----------------
 create table if not exists public.tiquetes (
-  numero          int primary key check (numero between 1 and 1000),
+  numero          int primary key check (numero between 0 and 999),
   estado          text not null default 'disponible'
                   check (estado in ('disponible', 'reservado', 'vendido')),
   reservado_hasta timestamptz,
@@ -13,9 +13,16 @@ create table if not exists public.tiquetes (
   actualizado     timestamptz not null default now()
 );
 
+-- (Si ya habías corrido una versión anterior con números 001–1000,
+--  esto la pasa a 000–999. Si es la primera vez, no cambia nada.)
+alter table public.tiquetes drop constraint if exists tiquetes_numero_check;
+delete from public.tiquetes where numero = 1000 and compra_id is null;
+
 insert into public.tiquetes (numero)
-select g from generate_series(1, 1000) g
+select g from generate_series(0, 999) g
 on conflict (numero) do nothing;
+
+alter table public.tiquetes add constraint tiquetes_numero_check check (numero between 0 and 999);
 
 -- 2) Compras: quién compró, qué celebración eligió y cómo va el pago ---
 create table if not exists public.compras (

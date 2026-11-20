@@ -15,9 +15,9 @@
   const pad = (n) => String(n).padStart(3, "0");
   const cells = [];
 
-  // Pintar los 1000 números
+  // Pintar los 1000 números (000 a 999)
   const frag = document.createDocumentFragment();
-  for (let n = 1; n <= 1000; n += 1) {
+  for (let n = 0; n <= 999; n += 1) {
     const el = document.createElement(live ? "button" : "div");
     el.className = "ticket-number";
     el.textContent = pad(n);
@@ -31,10 +31,10 @@
 
   // Buscar un número
   search?.addEventListener("input", () => {
-    const n = Number(search.value);
+    const n = search.value === "" ? -1 : Number(search.value);
     cells.forEach((c) => c.classList.remove("is-found"));
-    if (n >= 1 && n <= 1000) {
-      const c = cells[n - 1];
+    if (Number.isInteger(n) && n >= 0 && n <= 999) {
+      const c = cells[n];
       c.classList.add("is-found");
       c.scrollIntoView({ behavior: "smooth", block: "center" });
     }
@@ -55,11 +55,11 @@
       states = {};
       rows.forEach((row) => { states[row.numero] = row.estado; });
       cells.forEach((c, i) => {
-        const st = states[i + 1] || "disponible";
+        const st = states[i] || "disponible";
         c.classList.toggle("is-sold", st === "vendido");
         c.classList.toggle("is-held", st === "reservado");
         c.disabled = st !== "disponible";
-        c.setAttribute("aria-label", `Número ${pad(i + 1)} ${st === "vendido" ? "vendido" : st === "reservado" ? "en proceso de pago" : "disponible"}`);
+        c.setAttribute("aria-label", `Número ${pad(i)} ${st === "vendido" ? "vendido" : st === "reservado" ? "en proceso de pago" : "disponible"}`);
       });
       const libres = 1000 - rows.length;
       status.textContent = `${libres} DE 1000`;

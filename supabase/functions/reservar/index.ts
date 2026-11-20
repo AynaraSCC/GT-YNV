@@ -38,7 +38,7 @@ Deno.serve(async (req) => {
   const celebracion = String(d.celebracion ?? "");
   const acepta = d.acepta === true;
 
-  if (!Number.isInteger(numero) || numero < 1 || numero > 1000) return json({ error: "Número inválido" }, 400);
+  if (!Number.isInteger(numero) || numero < 0 || numero > 999) return json({ error: "Número inválido" }, 400);
   if (nombre.length < 5) return json({ error: "Escribe tu nombre completo" }, 400);
   if (cedula.length < 5) return json({ error: "Cédula inválida" }, 400);
   if (!/^3\d{9}$/.test(telefono)) return json({ error: "Celular inválido (10 dígitos, empieza por 3)" }, 400);

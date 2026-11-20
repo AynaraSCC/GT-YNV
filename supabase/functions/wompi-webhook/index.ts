@@ -24,7 +24,7 @@ async function enviarCorreo(c: any) {
   const html = `
   <div style="background:#0b0a08;padding:32px;font-family:Georgia,serif;color:#f0e9dc">
     <p style="color:#c8a45c;letter-spacing:3px;font-size:11px;font-family:Arial">GOLDEN TICKET · YENOVA CUPCAKES</p>
-    <h1 style="font-weight:400;font-size:30px;margin:10px 0">¡Tu tiquete está confirmado, ${c.nombre.split(" ")[0]}!</h1>
+    <h1 style="font-weight:400;font-size:30px;margin:10px 0">¡Tu ticket está confirmado, ${c.nombre.split(" ")[0]}!</h1>
     <div style="border:1px solid #c8a45c;padding:22px;margin:22px 0;text-align:center;background:linear-gradient(130deg,#9b783d,#e9d39a,#a47f40);color:#21190d">
       <div style="font-family:Arial;font-size:11px;letter-spacing:3px">TU NÚMERO</div>
       <div style="font-size:54px">${num}</div>
