@@ -60,3 +60,9 @@ button.ticket-number{all:unset;box-sizing:border-box;cursor:pointer;border:1px s
 @media(max-width:800px){.gallery-grid{grid-template-columns:1fr;grid-template-rows:none;gap:26px}.gallery-photo{aspect-ratio:4/5;height:auto}}
 @media(max-width:480px){.gallery-grid{grid-template-rows:none}.gallery-cta{margin-top:55px}}
 .photo-number{text-shadow:0 1px 10px #000c}
+/* Carrusel en formato vertical (como el video de boda) y videos a color */
+.prize-layout{align-items:center}.story-reel{aspect-ratio:576/934;min-height:0!important;width:min(100%,440px,calc(82vh * 576 / 934));justify-self:center}.reel-slide.has-video{filter:none}.reel-slide video{object-fit:cover}
+.reel-sound .snd-label-on,.reel-sound[aria-pressed=true] .snd-label-off{display:none}.reel-sound[aria-pressed=true] .snd-label-on{display:inline}.reel-sound[aria-pressed=false]{animation:soundPulse 2s ease-in-out infinite}@keyframes soundPulse{50%{box-shadow:0 0 0 6px #ead7a226}}
+.story-reel .prize-image-copy strong{font-size:32px}
+@media(max-width:800px){.story-reel{width:min(100%,calc(80vh * 576 / 934))}}
+@media(max-width:480px){.story-reel .prize-image-copy{left:24px;right:24px;bottom:26px}.story-reel .prize-image-copy strong{font-size:30px}}

@@ -9,7 +9,7 @@ if (reel) {
   const soundBtn = document.getElementById("reel-sound");
   const options = [...document.querySelectorAll(".prize-option")];
   const PHOTO_MS = 4000;
-  const MAX_VIDEO_MS = 20000;
+  const MAX_VIDEO_MS = 30000;
   let order = slides.map((_, i) => i); // índices que se muestran
   let pos = 0;
   let timer = null;
@@ -24,7 +24,7 @@ if (reel) {
     const videoUrl = `assets/video/${base}.mp4`;
     if (await exists(videoUrl)) {
       const v = document.createElement("video");
-      v.src = videoUrl; v.muted = true; v.playsInline = true; v.preload = "metadata";
+      v.src = videoUrl; v.poster = `assets/video/${base}.jpg`; v.muted = true; v.playsInline = true; v.preload = "metadata";
       v.setAttribute("playsinline", ""); v.setAttribute("muted", "");
       slide.prepend(v);
       slide.classList.add("has-photo", "has-video");
@@ -87,15 +87,26 @@ if (reel) {
     }
   }
 
-  soundBtn?.addEventListener("click", () => {
-    muted = !muted;
+  // Los navegadores no dejan arrancar con sonido: se activa con el primer toque.
+  const setMuted = (value) => {
+    muted = value;
     slides.forEach((s) => { const v = s.querySelector("video"); if (v) v.muted = muted; });
-    soundBtn.setAttribute("aria-pressed", String(!muted));
-    soundBtn.setAttribute("aria-label", muted ? "Activar sonido" : "Silenciar");
+    if (soundBtn) {
+      soundBtn.setAttribute("aria-pressed", String(!muted));
+      soundBtn.setAttribute("aria-label", muted ? "Activar sonido" : "Silenciar");
+    }
+    reel.classList.toggle("has-sound", !muted);
+  };
+  soundBtn?.addEventListener("click", (e) => {
+    e.stopPropagation();
+    setMuted(!muted);
+    const v = slides[order[pos]].querySelector("video");
+    if (v && !muted) { v.currentTime = 0; v.play().catch(() => {}); show(pos); }
   });
-  reel.querySelector(".reel-next").addEventListener("click", () => show(pos + 1));
-  reel.querySelector(".reel-prev").addEventListener("click", () => show(pos - 1));
+  reel.querySelector(".reel-next").addEventListener("click", () => { setMuted(false); show(pos + 1); });
+  reel.querySelector(".reel-prev").addEventListener("click", () => { setMuted(false); show(pos - 1); });
   options.forEach((o) => o.addEventListener("click", () => {
+    setMuted(false);
     const target = o.dataset.pos !== undefined ? Number(o.dataset.pos) : order.indexOf(Number(o.dataset.jump));
     if (target >= 0) show(target);
     if (window.innerWidth < 800) reel.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -106,7 +117,7 @@ if (reel) {
   reel.addEventListener("touchend", (e) => {
     if (startX === null) return;
     const dx = e.changedTouches[0].clientX - startX;
-    if (Math.abs(dx) > 40) show(pos + (dx < 0 ? 1 : -1));
+    if (Math.abs(dx) > 40) { setMuted(false); show(pos + (dx < 0 ? 1 : -1)); }
     startX = null;
   });
 
