@@ -13,16 +13,15 @@ El salón 3D usa módulos de JavaScript, así que **no funciona abriendo el arch
 4. **Salón 3D** — las puertas se abren y la cámara entra a un salón de gala en tonos marfil, champaña y dorado (`js/salon.js`, con Three.js desde CDN).
 5. Tickets dorados, numeración 000–999, preferencias y condiciones.
 
-## Fotografías
-Guárdalas en `assets/images/` con estos nombres exactos (formato vertical u horizontal, mínimo 1200 px):
+## Fotos y videos
 
-| Carrusel "Lo hacemos parte de tu historia" | Galería |
-|---|---|
-| `quince-1.jpg`, `quince-2.jpg`, `quince-3.jpg` | `img1.jpg` — boda |
-| `boda-1.jpg`, `boda-2.jpg`, `boda-3.jpg` | `img2.jpg` — quince años |
-| `grado-1.jpg`, `grado-2.jpg`, `grado-3.jpg` | `img3.jpg` — grado universitario |
+**Galería "¿Qué celebrarías tú?"** (fotos en blanco y negro): `assets/images/img1.jpg` boda, `img2.jpg` quince, `img3.jpg` grado.
 
-Mientras una foto no exista, el carrusel muestra un fondo elegante con el nombre de la celebración (no se ve roto).
+**Carrusel "Lo hacemos parte de tu historia"**: 9 espacios (`quince-1..3`, `boda-1..3`, `grado-1..3`). Cada espacio puede ser:
+- un **video** en `assets/video/` → por ejemplo `assets/video/boda-1.mp4`, o
+- una **foto** en `assets/images/` → por ejemplo `assets/images/boda-2.jpg`.
+
+Si un espacio tiene video y foto, se usa el video. Los espacios vacíos se saltan solos. Todo se muestra en blanco y negro. Los videos se reproducen sin sonido, hay un botón para activarlo y pasan al siguiente cuando terminan (máximo 20 s). Usa MP4 y procura que cada uno pese menos de 5 MB.
 
 ### Ideas para las fotos (si se generan con IA)
 - **Quince:** quinceañera con vestido lila de princesa, salón de gala en tonos marfil y dorado, candelabros de cristal, luces cálidas, fondo muy tierno con flores en tonos pastel.

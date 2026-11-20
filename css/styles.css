@@ -52,3 +52,11 @@ button.ticket-number{all:unset;box-sizing:border-box;cursor:pointer;border:1px s
 @media(max-width:800px){.hero{grid-template-columns:1fr}}
 .prize-details .price-line:last-child{margin-bottom:0}.included-full{margin-top:70px}@media(max-width:640px){.included-full{margin-top:44px;padding-top:44px}}
 .included-full{border-top:0;padding-top:0}@media(max-width:640px){.included-full{padding-top:0}}
+/* Galería en blanco y negro + llamado a comprar */
+.gallery-grid{grid-template-columns:repeat(3,1fr);grid-template-rows:none;gap:18px}.gallery-main{grid-row:auto}.gallery-photo{height:auto;aspect-ratio:4/5;filter:grayscale(1) contrast(1.05);transition:transform .6s ease,filter .4s}.gallery-card{overflow:hidden}.gallery-card:hover .gallery-photo{filter:grayscale(1) contrast(1.05) brightness(1.12);transform:scale(1.02)}.photo-one{background-position:45% center}.photo-two{background-position:center 35%}.photo-three{background-position:center 30%}.gallery-card figcaption b{font-size:19px}
+.gallery-cta{max-width:720px;margin:70px auto 0;text-align:center;display:grid;justify-items:center;gap:16px}.gallery-cta .eyebrow{margin:0}.gallery-cta blockquote{margin:0;font:500 clamp(36px,4.6vw,58px)/1 var(--serif);letter-spacing:-.02em}.gallery-cta blockquote em{color:var(--gold-light);font-weight:400}.gallery-cta>p:not(.eyebrow){color:#bdb4a5;font-size:14px;line-height:1.8;margin:4px 0 8px;max-width:600px}.gallery-cta small{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+/* Carrusel: videos y fotos en blanco y negro */
+.reel-slide video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}.reel-slide.has-photo{filter:grayscale(1) contrast(1.05)}.reel-sound{bottom:auto;top:62px;right:20px;z-index:4}.reel-sound[hidden]{display:none}
+@media(max-width:800px){.gallery-grid{grid-template-columns:1fr;grid-template-rows:none;gap:26px}.gallery-photo{aspect-ratio:4/5;height:auto}}
+@media(max-width:480px){.gallery-grid{grid-template-rows:none}.gallery-cta{margin-top:55px}}
+.photo-number{text-shadow:0 1px 10px #000c}

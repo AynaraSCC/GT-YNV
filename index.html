@@ -76,19 +76,20 @@
       <div class="prize-layout">
         <div class="prize-image story-reel" id="story-reel" aria-roledescription="carrusel" aria-label="Fotos de quince años, bodas y grados">
           <div class="reel-slides">
-            <div class="reel-slide reel-quince is-active" data-cat="quince" data-label="QUINCE AÑOS" data-src="assets/images/quince-1.jpg"><span class="reel-fallback"><i>✦</i>Quince años</span></div>
-            <div class="reel-slide reel-quince" data-cat="quince" data-label="QUINCE AÑOS" data-src="assets/images/quince-2.jpg"><span class="reel-fallback"><i>✦</i>Quince años</span></div>
-            <div class="reel-slide reel-quince" data-cat="quince" data-label="QUINCE AÑOS" data-src="assets/images/quince-3.jpg"><span class="reel-fallback"><i>✦</i>Quince años</span></div>
-            <div class="reel-slide reel-boda" data-cat="boda" data-label="BODA" data-src="assets/images/boda-1.jpg"><span class="reel-fallback"><i>✦</i>Boda</span></div>
-            <div class="reel-slide reel-boda" data-cat="boda" data-label="BODA" data-src="assets/images/boda-2.jpg"><span class="reel-fallback"><i>✦</i>Boda</span></div>
-            <div class="reel-slide reel-boda" data-cat="boda" data-label="BODA" data-src="assets/images/boda-3.jpg"><span class="reel-fallback"><i>✦</i>Boda</span></div>
-            <div class="reel-slide reel-grado" data-cat="grado" data-label="GRADO UNIVERSITARIO" data-src="assets/images/grado-1.jpg"><span class="reel-fallback"><i>✦</i>Grado universitario</span></div>
-            <div class="reel-slide reel-grado" data-cat="grado" data-label="GRADO UNIVERSITARIO" data-src="assets/images/grado-2.jpg"><span class="reel-fallback"><i>✦</i>Grado universitario</span></div>
-            <div class="reel-slide reel-grado" data-cat="grado" data-label="GRADO UNIVERSITARIO" data-src="assets/images/grado-3.jpg"><span class="reel-fallback"><i>✦</i>Grado universitario</span></div>
+            <div class="reel-slide reel-quince is-active" data-cat="quince" data-label="QUINCE AÑOS" data-base="quince-1"><span class="reel-fallback"><i>✦</i>Quince años</span></div>
+            <div class="reel-slide reel-quince" data-cat="quince" data-label="QUINCE AÑOS" data-base="quince-2"><span class="reel-fallback"><i>✦</i>Quince años</span></div>
+            <div class="reel-slide reel-quince" data-cat="quince" data-label="QUINCE AÑOS" data-base="quince-3"><span class="reel-fallback"><i>✦</i>Quince años</span></div>
+            <div class="reel-slide reel-boda" data-cat="boda" data-label="BODA" data-base="boda-1"><span class="reel-fallback"><i>✦</i>Boda</span></div>
+            <div class="reel-slide reel-boda" data-cat="boda" data-label="BODA" data-base="boda-2"><span class="reel-fallback"><i>✦</i>Boda</span></div>
+            <div class="reel-slide reel-boda" data-cat="boda" data-label="BODA" data-base="boda-3"><span class="reel-fallback"><i>✦</i>Boda</span></div>
+            <div class="reel-slide reel-grado" data-cat="grado" data-label="GRADO UNIVERSITARIO" data-base="grado-1"><span class="reel-fallback"><i>✦</i>Grado universitario</span></div>
+            <div class="reel-slide reel-grado" data-cat="grado" data-label="GRADO UNIVERSITARIO" data-base="grado-2"><span class="reel-fallback"><i>✦</i>Grado universitario</span></div>
+            <div class="reel-slide reel-grado" data-cat="grado" data-label="GRADO UNIVERSITARIO" data-base="grado-3"><span class="reel-fallback"><i>✦</i>Grado universitario</span></div>
           </div>
           <div class="reel-shade"></div>
           <div class="reel-progress" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
           <div class="image-placeholder-label">GOLDEN EXPERIENCE <span class="reel-cat">QUINCE AÑOS</span></div>
+          <button type="button" class="hero-sound reel-sound" id="reel-sound" aria-pressed="false" aria-label="Activar sonido" hidden><span class="snd-off">🔇</span><span class="snd-on">🔊</span> <b>Sonido</b></button>
           <button type="button" class="reel-nav reel-prev" aria-label="Foto anterior">‹</button>
           <button type="button" class="reel-nav reel-next" aria-label="Foto siguiente">›</button>
           <div class="prize-image-copy"><span>EL DÍA QUE IMAGINAS</span><strong>Lo hacemos<br>parte de tu historia.</strong></div>
@@ -125,21 +126,28 @@
       <div class="section-heading centered">
         <p class="eyebrow">02 — ENCUENTRA TU INSPIRACIÓN</p>
         <h2>¿Qué celebrarías <em>tú?</em></h2>
-        <p class="section-sub">Tres ocasiones especiales. Una celebración que puede llevar tu sello.</p>
+        <p class="section-sub">Cierra los ojos un segundo e imagina tu fiesta. Ahora imagina que es tuya.</p>
       </div>
       <div class="gallery-grid">
-        <figure class="gallery-card gallery-main">
-          <div class="gallery-photo photo-one"><span class="photo-number">01</span></div>
-          <figcaption><span>BODA</span><b>Un comienzo para dos</b></figcaption>
+        <figure class="gallery-card">
+          <div class="gallery-photo photo-one" role="img" aria-label="Novia con ramo de rosas blancas"><span class="photo-number">01</span></div>
+          <figcaption><span>BODA</span><b>El “sí” merece una gran fiesta</b></figcaption>
         </figure>
         <figure class="gallery-card">
-          <div class="gallery-photo photo-two"><span class="photo-number">02</span></div>
-          <figcaption><span>QUINCE AÑOS</span><b>Una noche para recordar</b></figcaption>
+          <div class="gallery-photo photo-two" role="img" aria-label="Quinceañera con corona frente al espejo"><span class="photo-number">02</span></div>
+          <figcaption><span>QUINCE AÑOS</span><b>Tu noche de princesa</b></figcaption>
         </figure>
         <figure class="gallery-card">
-          <div class="gallery-photo photo-three"><span class="photo-number">03</span></div>
-          <figcaption><span>GRADO UNIVERSITARIO</span><b>El logro de una etapa</b></figcaption>
+          <div class="gallery-photo photo-three" role="img" aria-label="Graduada con birrete junto a su torta"><span class="photo-number">03</span></div>
+          <figcaption><span>GRADO UNIVERSITARIO</span><b>Celebra lo que tanto te costó</b></figcaption>
         </figure>
+      </div>
+      <div class="gallery-cta">
+        <p class="eyebrow"><span></span> TU MOMENTO ES AHORA</p>
+        <blockquote>Los sueños no se esperan: <em>se eligen.</em></blockquote>
+        <p>Con un solo ticket de $50.000 puedes ganar la gala completa: salón, decoración, comida, música, fotos y video para hasta 100 invitados. Mientras lo piensas, alguien más puede elegir tu número de la suerte.</p>
+        <a class="button button-gold" href="#tiquetes">Elige tu número <span>→</span></a>
+        <small>Solo 1000 números · del 000 al 999</small>
       </div>
     </section>
 
@@ -176,7 +184,7 @@
       <div class="section-heading centered">
         <p class="eyebrow">05 — NUMERACIÓN DE LA RIFA</p>
         <h2>Mil oportunidades.<br><em>Un Golden Ticket.</em></h2>
-        <p class="section-sub">Elige tu número de la suerte. Los números en gris ya tienen dueño.</p>
+        <p class="section-sub">Elige tu número de la suerte. Los números en gris ya tienen dueño: no dejes que el tuyo se vaya.</p>
       </div>
       <div class="number-summary">
         <div><span>NUMERACIÓN</span><strong>000 — 999</strong></div>
