@@ -5,7 +5,7 @@ const reel = document.getElementById("story-reel");
 if (reel) {
   const slides = [...reel.querySelectorAll(".reel-slide")];
   const bars = [...reel.querySelectorAll(".reel-progress i")];
-  const catLabel = reel.querySelector(".reel-cat");
+  const catLabel = document.querySelector(".reel-cat");
   const soundBtn = document.getElementById("reel-sound");
   const options = [...document.querySelectorAll(".prize-option")];
   const PHOTO_MS = 4000;
