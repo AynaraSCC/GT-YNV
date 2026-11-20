@@ -47,7 +47,7 @@
         <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
         <figure class="hero-video">
           <video id="hero-video" src="assets/video/yenova-solorzano.mp4" poster="assets/video/yenova-solorzano.jpg" autoplay muted loop playsinline preload="metadata" aria-label="YeNoVa Cupcakes, responsable, y Recepciones Solórzano, casa de eventos contratada: ¡Ganaté una noche de gala!"></video>
-          <button type="button" class="hero-sound" id="hero-sound" aria-pressed="false" aria-label="Activar sonido"><span class="snd-off">🔇</span><span class="snd-on">🔊</span> <b>Sonido</b></button>
+          <button type="button" class="sound-btn hero-sound" id="hero-sound" aria-pressed="false" aria-label="Activar sonido"><svg class="snd-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg><svg class="snd-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18.2 6.5a8 8 0 0 1 0 11"/></svg></button>
           <i class="corner c-tl"></i><i class="corner c-tr"></i><i class="corner c-bl"></i><i class="corner c-br"></i>
         </figure>
         <div class="hero-mini-ticket" aria-hidden="true"><span>GOLDEN TICKET</span><b>A night<br>to remember</b></div>
@@ -76,7 +76,8 @@
         <button type="button" class="prize-option" data-jump="6" data-cat="grado"><span>03</span><b>El triunfo de tu grado universitario</b><i>✦</i></button>
       </div>
       <div class="prize-layout">
-        <div class="prize-image story-reel" id="story-reel" aria-roledescription="carrusel" aria-label="Fotos de quince años, bodas y grados">
+        <div class="reel-wrap">
+        <div class="prize-image story-reel" id="story-reel" aria-roledescription="carrusel" aria-label="Videos de quince años, bodas y grados">
           <div class="reel-slides">
             <div class="reel-slide reel-quince is-active" data-cat="quince" data-label="QUINCE AÑOS" data-base="quince-1"><span class="reel-fallback"><i>✦</i>Quince años</span></div>
             <div class="reel-slide reel-quince" data-cat="quince" data-label="QUINCE AÑOS" data-base="quince-2"><span class="reel-fallback"><i>✦</i>Quince años</span></div>
@@ -88,13 +89,12 @@
             <div class="reel-slide reel-grado" data-cat="grado" data-label="GRADO UNIVERSITARIO" data-base="grado-2"><span class="reel-fallback"><i>✦</i>Grado universitario</span></div>
             <div class="reel-slide reel-grado" data-cat="grado" data-label="GRADO UNIVERSITARIO" data-base="grado-3"><span class="reel-fallback"><i>✦</i>Grado universitario</span></div>
           </div>
-          <div class="reel-shade"></div>
           <div class="reel-progress" aria-hidden="true"><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i><i><b></b></i></div>
-          <div class="image-placeholder-label">GOLDEN EXPERIENCE <span class="reel-cat">QUINCE AÑOS</span></div>
-          <button type="button" class="hero-sound reel-sound" id="reel-sound" aria-pressed="false" aria-label="Activar sonido" hidden><span class="snd-off">🔇</span><span class="snd-on">🔊</span> <b class="snd-label-off">Toca para escuchar</b><b class="snd-label-on">Sonido</b></button>
-          <button type="button" class="reel-nav reel-prev" aria-label="Foto anterior">‹</button>
-          <button type="button" class="reel-nav reel-next" aria-label="Foto siguiente">›</button>
-          <div class="prize-image-copy"><span>EL DÍA QUE IMAGINAS</span><strong>Lo hacemos<br>parte de tu historia.</strong></div>
+          <button type="button" class="sound-btn reel-sound" id="reel-sound" aria-pressed="false" aria-label="Activar sonido" hidden><svg class="snd-off" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z"/><path d="M16 9.5l5 5M21 9.5l-5 5"/></svg><svg class="snd-on" viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9.5h3.2L12 5.5v13l-4.8-4H4z"/><path d="M15.5 9a4.2 4.2 0 0 1 0 6M18.2 6.5a8 8 0 0 1 0 11"/></svg></button>
+          <button type="button" class="reel-nav reel-prev" aria-label="Anterior">‹</button>
+          <button type="button" class="reel-nav reel-next" aria-label="Siguiente">›</button>
+        </div>
+          <div class="reel-caption"><span class="reel-cat">QUINCE AÑOS</span><strong>Lo hacemos parte de <em>tu historia.</em></strong></div>
         </div>
         <div class="prize-details">
           <p class="large-copy">Gana una celebración diseñada alrededor del momento que quieras compartir con las personas importantes de tu vida.</p>

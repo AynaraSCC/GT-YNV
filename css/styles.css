@@ -70,3 +70,11 @@ button.ticket-number{all:unset;box-sizing:border-box;cursor:pointer;border:1px s
 .brand-logo{display:block;height:46px;width:auto}.brand .brand-name{padding-left:14px;border-left:1px solid var(--line);line-height:1.4}.footer-brand .brand-logo{height:64px}.thanks .brand-logo{height:56px}
 @media(max-width:480px){.topbar .brand-logo{height:36px}.topbar .brand{gap:10px}.topbar .brand-name{padding-left:10px;font-size:8px;letter-spacing:.16em}.footer-brand .brand-logo{height:52px}}
 .footer-brand .brand-name{white-space:nowrap}
+/* Carrusel: videos completos, a color y sin textos encima */
+.reel-wrap{display:grid;gap:20px;justify-items:center;align-content:start}.story-reel{aspect-ratio:9/16;width:min(100%,400px,calc(78vh * 9 / 16));background:#000;border-color:#c8a45c55}.reel-slide.has-video,.reel-slide video{filter:none!important}.reel-slide video{object-fit:contain;background:#000}.reel-progress{top:12px;left:14px;right:14px}.reel-progress i{height:2px;background:#ffffff38}
+.reel-caption{display:grid;gap:8px;text-align:center}.reel-caption span{font-size:9px;letter-spacing:.22em;color:var(--gold)}.reel-caption strong{font:500 30px/1.05 var(--serif)}.reel-caption em{color:var(--gold-light);font-weight:400}
+/* Botón de volumen minimalista */
+.sound-btn,.sound-btn.hero-sound{all:unset;box-sizing:border-box;position:absolute;z-index:4;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;cursor:pointer;color:#fff;background:#0000004d;border:1px solid #ffffff40;backdrop-filter:blur(6px);transition:background .25s,border-color .25s;animation:none}.sound-btn:hover{background:#00000080;border-color:#ffffff80}.sound-btn:focus-visible{outline:2px solid var(--gold-light);outline-offset:2px}.sound-btn svg{width:17px;height:17px;fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.sound-btn .snd-on,.sound-btn[aria-pressed=true] .snd-off{display:none}.sound-btn[aria-pressed=true] .snd-on{display:block}.sound-btn[hidden]{display:none}
+#hero-sound{right:14px;bottom:14px;top:auto}#reel-sound{right:12px;top:26px;bottom:auto}
+@media(max-width:800px){.story-reel{width:min(100%,calc(74vh * 9 / 16))}}
+.reel-progress{pointer-events:none}.story-reel .reel-slide,.story-reel video{filter:none!important}
