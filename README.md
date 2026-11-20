@@ -21,7 +21,7 @@ El salón 3D usa módulos de JavaScript, así que **no funciona abriendo el arch
 - un **video** en `assets/video/` → por ejemplo `assets/video/boda-1.mp4`, o
 - una **foto** en `assets/images/` → por ejemplo `assets/images/boda-2.jpg`.
 
-Si un espacio tiene video y foto, se usa el video. Los espacios vacíos se saltan solos. Todo se muestra en blanco y negro. Los videos se reproducen sin sonido, hay un botón para activarlo y pasan al siguiente cuando terminan (máximo 20 s). Usa MP4 y procura que cada uno pese menos de 5 MB.
+Si un espacio tiene video y foto, se usa el video. Los espacios vacíos se saltan solos. Las fotos se ven en blanco y negro y los videos a color. Los navegadores no dejan arrancar con sonido: el sonido se activa con el primer toque (botón "Toca para escuchar", flechas o pestañas). Formato vertical 576×934 como el video de boda, MP4, menos de 5 MB, máximo 30 s.
 
 ### Ideas para las fotos (si se generan con IA)
 - **Quince:** quinceañera con vestido lila de princesa, salón de gala en tonos marfil y dorado, candelabros de cristal, luces cálidas, fondo muy tierno con flores en tonos pastel.
