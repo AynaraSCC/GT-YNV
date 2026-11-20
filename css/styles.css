@@ -50,3 +50,5 @@ button.ticket-number{all:unset;box-sizing:border-box;cursor:pointer;border:1px s
 @media(max-width:480px){.hero-media{height:auto;margin-top:46px}.hero-partners{gap:10px}.hero-partners b{font-size:15px}.hero-partners span{font-size:6.5px;letter-spacing:.14em}.hero-sound{right:10px;bottom:10px;padding:6px 9px}}
 .hero{grid-template-columns:minmax(0,1fr) minmax(0,1fr);column-gap:56px}.hero h1{font-size:clamp(44px,4.7vw,70px)}
 @media(max-width:800px){.hero{grid-template-columns:1fr}}
+.prize-details .price-line:last-child{margin-bottom:0}.included-full{margin-top:70px}@media(max-width:640px){.included-full{margin-top:44px;padding-top:44px}}
+.included-full{border-top:0;padding-top:0}@media(max-width:640px){.included-full{padding-top:0}}
