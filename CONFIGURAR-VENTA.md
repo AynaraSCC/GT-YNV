@@ -1,4 +1,4 @@
-# Cómo activar la venta de tiquetes
+# Cómo activar la venta de tickets
 
 Mientras `js/config.js` esté vacío, la página funciona en **modo demostración**: se ve la cuadrícula, pero no se puede comprar.
 Para vender de verdad necesitas tres cosas: **Supabase** (base de datos), **Wompi** (pagos) y **Brevo** (correo de confirmación).
@@ -17,7 +17,7 @@ Persona elige número → formulario → se aparta el número 15 min (Supabase)
 
 1. Crea una cuenta en https://supabase.com → **New project** (región: São Paulo o la más cercana). Guarda la contraseña.
 2. Ve a **SQL Editor → New query**, pega todo el archivo `supabase/schema.sql` y dale **Run**. Esto crea:
-   - `tiquetes`: los 1000 números y su estado (disponible / reservado / vendido).
+   - `tiquetes`: los 1000 números (000 a 999) y su estado (disponible / reservado / vendido).
    - `compras`: nombre, cédula, celular, correo, **celebración elegida (quince, boda, grado)** y estado del pago.
    - `ventas_confirmadas`: la lista limpia de quién compró qué número (para tu tía; se puede exportar a CSV desde *Table Editor*).
 3. Ve a **Project Settings → API** y copia:
@@ -40,7 +40,7 @@ Y en **URL de Eventos** pon:
 https://TU-PROYECTO.supabase.co/functions/v1/wompi-webhook
 ```
 
-> No se usa un "link de pago" fijo de Wompi: ese link no dice qué número compró cada persona. Aquí la página crea un pago con la referencia del número (ej. `GT-777-…`), y así la base de datos sabe exactamente qué tiquete pagar.
+> No se usa un "link de pago" fijo de Wompi: ese link no dice qué número compró cada persona. Aquí la página crea un pago con la referencia del número (ej. `GT-777-…`), y así la base de datos sabe exactamente qué ticket pagar.
 
 ## 3. Brevo (correo de confirmación) — gratis hasta 300 correos/día
 
