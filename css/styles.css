@@ -66,3 +66,7 @@ button.ticket-number{all:unset;box-sizing:border-box;cursor:pointer;border:1px s
 .story-reel .prize-image-copy strong{font-size:32px}
 @media(max-width:800px){.story-reel{width:min(100%,calc(80vh * 576 / 934))}}
 @media(max-width:480px){.story-reel .prize-image-copy{left:24px;right:24px;bottom:26px}.story-reel .prize-image-copy strong{font-size:30px}}
+/* Logo YeNoVa */
+.brand-logo{display:block;height:46px;width:auto}.brand .brand-name{padding-left:14px;border-left:1px solid var(--line);line-height:1.4}.footer-brand .brand-logo{height:64px}.thanks .brand-logo{height:56px}
+@media(max-width:480px){.topbar .brand-logo{height:36px}.topbar .brand{gap:10px}.topbar .brand-name{padding-left:10px;font-size:8px;letter-spacing:.16em}.footer-brand .brand-logo{height:52px}}
+.footer-brand .brand-name{white-space:nowrap}
